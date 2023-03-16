@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
-import { scrollTop } from "../../utils/functions";
+// import { scrollTop } from "../../utils/functions";
 
 import ItemCount from "../ItemCount/ItemCount";
 import Loader from "../Loader/Loader";
@@ -17,8 +17,8 @@ const ItemDetail = ({ prod }) => {
   };
 
   useEffect(() => {
-    scrollTop();
     setTimeout(() => {
+      window.scrollTo(0, 0);
       setLoading(false);
     }, 1000);
   }, []);

@@ -6,7 +6,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getProducts, getCategories } from "../../utils/firebase";
 
 // Funcions
-import { scrollTop } from "../../utils/functions";
 
 // Components
 import ItemList from "../ItemList/ItemList";
@@ -21,7 +20,7 @@ const ItemListContainer = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    scrollTop();
+    window.scrollTo(0, 0);
     setTimeout(() => {
       setIsLoading(false);
     }, 1000);
