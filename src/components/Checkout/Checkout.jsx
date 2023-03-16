@@ -122,7 +122,7 @@ const Checkout = () => {
             <Link to={"/"}>
               <button
                 type="button"
-                className="font-medium text-gray-600 hover:text-gray-500"
+                className="font-medium text-gray-600 hover:text-gray-500 focus:outline-none"
               >
                 Continue Shopping
                 <span aria-hidden="true"> →</span>

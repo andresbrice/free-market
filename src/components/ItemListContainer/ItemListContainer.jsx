@@ -1,6 +1,6 @@
 // Hooks
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 // Firebase
 import { getProducts, getCategories } from "../../utils/firebase";
@@ -17,9 +17,13 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProductsLoaded, setIsProductsLoaded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     scrollTop();
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
   }, []);
 
   useEffect(() => {
@@ -29,6 +33,10 @@ const ItemListContainer = () => {
         const category = categories.filter(
           (cat) => cat.categoryName === categoryName
         );
+
+        if (category.length === 0) {
+          navigate("/not-found");
+        }
 
         const idCategory = category[0].id;
 

@@ -26,7 +26,7 @@ const Item = ({ item }) => {
         <Link to={routes[2].path.replace(":id", item.id)}>
           <button
             type="button"
-            className="w-full rounded-md bg-gray-800 px-3 py-2 text-md font-semibold text-white shadow-sm  hover:bg-gray-700 hover:text-white   "
+            className="w-full rounded-md bg-gray-800 px-3 py-2 text-md font-semibold text-white shadow-sm  hover:bg-gray-700 hover:text-white focus:outline-none"
           >
             More Details
           </button>

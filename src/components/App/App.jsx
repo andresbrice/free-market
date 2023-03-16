@@ -17,10 +17,10 @@ import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 // FIREBASE
-import { loadDB } from "../../utils/firebase";
+// import { loadDB } from "../../utils/firebase";
 
 function App() {
-  loadDB();
+  // loadDB();
 
   return (
     <BrowserRouter>

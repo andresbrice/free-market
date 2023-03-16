@@ -13,7 +13,7 @@ const Cart = () => {
           <Link to={"/"}>
             <button
               type="button"
-              className="font-medium text-gray-600 hover:text-gray-500"
+              className="font-medium text-gray-600 hover:text-gray-500 focus:outline-none"
             >
               Continue Shopping
               <span aria-hidden="true"> →</span>
@@ -34,7 +34,7 @@ const Cart = () => {
 
               <div className="mt-6">
                 <Link to={"/checkout"}>
-                  <button className="flex items-center justify-center rounded-md border border-transparent bg-cyan-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-500">
+                  <button className="flex items-center justify-center rounded-md border border-transparent bg-cyan-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-500 focus:outline-none">
                     Proceed to Checkout
                   </button>
                 </Link>
@@ -44,7 +44,7 @@ const Cart = () => {
                 <Link to={"/"}>
                   <button
                     type="button"
-                    className="font-medium text-gray-600 hover:text-gray-500"
+                    className="font-medium text-gray-600 hover:text-gray-500 focus:outline-none"
                   >
                     Or continue Shopping
                     <span aria-hidden="true"> →</span>

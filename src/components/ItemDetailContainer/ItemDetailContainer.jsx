@@ -1,6 +1,6 @@
 //HOOKS
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 // COMPONENTS
 import ItemDetail from "../ItemDetail/ItemDetail";
 // FIREBASE
@@ -11,9 +11,15 @@ const ItemDetailContainer = () => {
 
   const [product, setProduct] = useState([]);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     getProduct(id).then((prod) => {
-      setProduct(prod);
+      if (prod === null) {
+        navigate("/not-found");
+      } else {
+        setProduct(prod);
+      }
     });
   }, [id]);
   return (

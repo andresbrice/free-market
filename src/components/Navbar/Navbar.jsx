@@ -36,7 +36,7 @@ const Navbar = ({ brand }) => {
 
         <div className="flex items-center justify-start">
           <button
-            className="md:hidden ml-3 text-gray-300"
+            className="md:hidden ml-3 text-gray-300 focus:outline-none"
             onClick={() => toggleHamburgerHandler()}
           >
             <svg

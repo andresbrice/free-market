@@ -73,6 +73,9 @@ export const getProducts = async () => {
 
 export const getProduct = async (id) => {
   const product = await getDoc(doc(db, "products", id));
+  if (!product.exists()) {
+    return null; // Retorna null si no se encuentra el producto en la base de datos.
+  }
   const prod = { ...product.data(), id: product.id };
   return prod;
 };

@@ -5,6 +5,7 @@ import About from "../components/About/About.jsx";
 import NotFound from "../components/NotFound/NotFound.jsx";
 import Checkout from "../components/Checkout/Checkout.jsx";
 import Cart from "../components/Cart/Cart.jsx";
+import { Navigate } from "react-router-dom";
 
 export const AppRoutesContext = createContext([]);
 
@@ -15,7 +16,8 @@ export const routes = [
   { path: "/about", element: <About /> },
   { path: "/cart", element: <Cart /> },
   { path: "/checkout", element: <Checkout /> },
-  { path: "*", element: <NotFound /> },
+  { path: "*", element: <Navigate to="/not-found" replace /> },
+  { path: "/not-found", element: <NotFound /> },
 ];
 
 export const AppRoutesProvider = ({ children }) => {
