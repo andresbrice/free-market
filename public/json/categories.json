@@ -1,0 +1,14 @@
+[
+  {
+    "idCategory": 1,
+    "categoryName": "pizzas"
+  },
+  {
+    "idCategory": 2,
+    "categoryName": "empanadas"
+  },
+  {
+    "idCategory": 3,
+    "categoryName": "beverage"
+  }
+]

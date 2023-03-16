@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "idCategory": 1,
+    "name": "Faina",
+    "description": "Slice",
+    "price": 250,
+    "stock": 30,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/faina.jpg?alt=media&token=c4df98c2-3dcf-4ec4-ba33-d85ed70d9d28"
+  },
+  {
+    "id": 2,
+    "idCategory": 1,
+    "name": "Calabrian",
+    "description": "Large",
+    "price": 2000,
+    "stock": 25,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/pizzaCalabresa.jpg?alt=media&token=47a598d2-0f51-4fc6-9811-b48a5ff8d218"
+  },
+  {
+    "id": 3,
+    "idCategory": 1,
+    "name": "Special",
+    "description": "Large",
+    "price": 2100,
+    "stock": 20,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/pizzaEspecial.jpg?alt=media&token=33f48d83-1b26-43a2-9af5-74e3e87cc0e7"
+  },
+  {
+    "id": 4,
+    "idCategory": 1,
+    "name": "Fugazzeta",
+    "description": "Large",
+    "price": 2200,
+    "stock": 10,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/pizzaFugazzeta.jpg?alt=media&token=6f3109cb-3e05-494c-aacb-583c33a4c958"
+  },
+  {
+    "id": 5,
+    "idCategory": 1,
+    "name": "Margherita",
+    "description": "Large",
+    "price": 1900,
+    "stock": 30,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/pizzaMozzarella.jpg?alt=media&token=ec1b7096-602c-4a1d-bb61-7890fb005170"
+  },
+  {
+    "id": 6,
+    "idCategory": 1,
+    "name": "Neapolitan",
+    "description": "Large",
+    "price": 2000,
+    "stock": 21,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/pizzaNapolitana.jpg?alt=media&token=e8336657-ffa3-47d3-b76c-cb8971336a33"
+  },
+  {
+    "id": 7,
+    "idCategory": 1,
+    "name": "Arugula",
+    "description": "Large",
+    "price": 2100,
+    "stock": 25,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/pizzaRucula.jpg?alt=media&token=62516f2f-0c0a-477e-9795-212ec6519407"
+  },
+  {
+    "id": 8,
+    "idCategory": 2,
+    "name": "Ham & cheese empanadas",
+    "description": "Dozen",
+    "price": 2400,
+    "stock": 30,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/empanadas.jpg?alt=media&token=63ee61cb-67be-47d8-9dd4-3aa270e86b06"
+  },
+  {
+    "id": 9,
+    "idCategory": 2,
+    "name": "Meat empanadas",
+    "description": "Dozen",
+    "price": 2400,
+    "stock": 20,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/empanadas.jpg?alt=media&token=63ee61cb-67be-47d8-9dd4-3aa270e86b06"
+  },
+  {
+    "id": 10,
+    "idCategory": 2,
+    "name": "Chicken empanadas",
+    "description": "Dozen",
+    "price": 2400,
+    "stock": 15,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/empanadas.jpg?alt=media&token=63ee61cb-67be-47d8-9dd4-3aa270e86b06"
+  },
+  {
+    "id": 11,
+    "idCategory": 3,
+    "name": "Heineken beer",
+    "description": "1 LT",
+    "price": 400,
+    "stock": 30,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/cerveza.jpg?alt=media&token=87c90da1-ba2e-4658-822f-4f873fc0ae96"
+  },
+  {
+    "id": 12,
+    "idCategory": 3,
+    "name": "Coca Cola",
+    "description": "2.25 LTS",
+    "price": 500,
+    "stock": 20,
+    "img": "https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/gaseosa.jpg?alt=media&token=49d5ddff-d7ec-4701-a02f-e6d9317e6426"
+  }
+]
