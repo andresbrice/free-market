@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
-// import { scrollTop } from "../../utils/functions";
 
 import ItemCount from "../ItemCount/ItemCount";
 import Loader from "../Loader/Loader";
