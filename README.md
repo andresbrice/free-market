@@ -12,7 +12,7 @@ Users can add products to their shopping cart and then fill out a checkout form 
 - [Installation and Setup](#installation-and-setup)
 - [Features](#features)
 - [Technologies](#technologies)
-- [UI demo video](#video)
+- [UI demo video](#UI-demo-video)
 - [Contributing](#contributing)
 
 ## Demo
