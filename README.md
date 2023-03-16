@@ -68,11 +68,7 @@ The application was built with the following technologies:
 
 ## UI Demo Video
 
-<div style="position:relative; width:100%; padding-bottom:56.25%;">
-  <video style="position:absolute; top:0; left:0; width:100%; height:100%;" controls muted>
-    <source src="https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/freemarket.mp4?alt=media&token=6542fd01-0052-4d2f-98ad-6913bac9c5c3" type="video/mp4">
-  </video>
-</div>
+[![Demo Video](https://img.youtube.com/vi/RRTzb7WwmlA/0.jpg)](https://www.youtube.com/watch?v=RRTzb7WwmlA)
 
 ## Contributing
 
