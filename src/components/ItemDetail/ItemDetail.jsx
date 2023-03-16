@@ -38,7 +38,7 @@ const ItemDetail = ({ prod }) => {
             <Link to={"/cart"} className="w-full">
               <button
                 type="button"
-                className=" w-full rounded-md bg-cyan-600 px-3 py-2 text-md font-semibold text-white shadow-sm  hover:bg-cyan-500 hover:text-white outline-cyan-600 mt-3 "
+                className=" w-full rounded-md bg-cyan-600 px-3 py-2 text-md font-semibold text-white shadow-sm  hover:bg-cyan-500 hover:text-white focus:outline-none mt-3 "
               >
                 Purchase
               </button>

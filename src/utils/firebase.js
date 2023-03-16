@@ -3,6 +3,7 @@ import {
   getFirestore,
   collection,
   addDoc,
+  setDoc,
   getDocs,
   getDoc,
   doc,
@@ -37,17 +38,21 @@ export const loadDB = async () => {
       stock: product.stock,
       img: product.img,
       idCategory: product.idCategory,
-    }); //collection trae productos lo consulta, sino la crea
+    });
   });
 
   const promise2 = await fetch("./json/categories.json");
   const categories = await promise2.json();
 
-  categories.forEach(async (category) => {
-    await addDoc(collection(db, "categories"), {
+  const categoriesCollection = collection(db, "categories");
+  let counter = 1;
+
+  for (const category of categories) {
+    await setDoc(doc(categoriesCollection, counter.toString()), {
       categoryName: category.categoryName,
     });
-  });
+    counter++;
+  }
 };
 
 // CRUD DE PRODUCTOS

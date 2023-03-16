@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useCartContext } from "../../context/CartContext";
@@ -9,6 +9,7 @@ import {
 } from "../../utils/firebase";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+
 const Checkout = () => {
   const MySwal = withReactContent(Swal);
   const { cart, emptyCart, totalPrice } = useCartContext();
@@ -18,6 +19,11 @@ const Checkout = () => {
 
   const [email, setEmail] = useState("");
   const [confirmEmail, setConfirmEmail] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [dni, setDni] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [disabled, setDisabled] = useState(true);
 
   function handleEmailChange(e) {
     setEmail(e.target.value);
@@ -26,6 +32,37 @@ const Checkout = () => {
   function handleConfirmEmailChange(e) {
     setConfirmEmail(e.target.value);
   }
+
+  function handleFullNameChange(e) {
+    setFullName(e.target.value);
+  }
+
+  function handleDniChange(e) {
+    setDni(e.target.value);
+  }
+
+  function handlePhoneNumberChange(e) {
+    setPhoneNumber(e.target.value);
+  }
+
+  function handleAddressChange(e) {
+    setAddress(e.target.value);
+  }
+
+  useEffect(() => {
+    if (
+      fullName !== "" &&
+      email !== "" &&
+      confirmEmail !== "" &&
+      dni !== "" &&
+      phoneNumber !== "" &&
+      address !== ""
+    ) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  }, [fullName, email, confirmEmail, dni, phoneNumber, address]);
 
   const consultarForm = (e) => {
     e.preventDefault();
@@ -63,6 +100,8 @@ const Checkout = () => {
             totalPrice()
           )} was successfully placed.`,
           icon: "success",
+          confirmButtonColor: "#0891b2",
+          confirmButtonText: "Go to Homepage",
         }).then(() => {
           e.target.reset();
           emptyCart();
@@ -116,6 +155,7 @@ const Checkout = () => {
                       required
                       className="w-full border border-gray-200 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
                       pattern="[A-Za-z\u00F1 ]+"
+                      onChange={handleFullNameChange}
                     />
                   </div>
                 </div>
@@ -125,7 +165,7 @@ const Checkout = () => {
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Email address
+                    Email
                   </label>
                   <div className="mt-1">
                     <input
@@ -145,7 +185,7 @@ const Checkout = () => {
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Repeat email
+                    Confirm email
                   </label>
                   <div className="mt-1">
                     <input
@@ -177,6 +217,7 @@ const Checkout = () => {
                       className="w-full border border-gray-200 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
                       pattern="[0-9]+"
                       maxLength="8"
+                      onChange={handleDniChange}
                     />
                   </div>
                 </div>
@@ -197,6 +238,7 @@ const Checkout = () => {
                       className="w-full border border-gray-200 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
                       pattern="[0-9]+"
                       maxLength="10"
+                      onChange={handlePhoneNumberChange}
                     />
                   </div>
                 </div>
@@ -215,13 +257,19 @@ const Checkout = () => {
                       autoComplete="off"
                       required
                       className="w-full border border-gray-200 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
+                      onChange={handleAddressChange}
                     />
                   </div>
                 </div>
                 <div>
                   <button
                     type="submit"
-                    className="w-full flex justify-center  border border-transparent rounded-md  text-sm  focus:outline-none  bg-cyan-600 px-3 py-2 text-md font-semibold text-white shadow-sm  hover:bg-cyan-500 hover:text-white outline-cyan-600"
+                    className={`w-full flex justify-center  border border-transparent rounded-md  text-sm  focus:outline-none   px-3 py-2 text-md font-semibold text-white shadow-sm  ${
+                      !disabled
+                        ? "bg-cyan-600 hover:bg-cyan-500 hover:text-white"
+                        : "bg-gray-400 disabled:cursor-not-allowed"
+                    }`}
+                    disabled={disabled ? "disabled" : ""}
                   >
                     Confirm Purchase
                   </button>
