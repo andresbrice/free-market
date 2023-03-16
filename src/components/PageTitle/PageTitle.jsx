@@ -1,4 +1,5 @@
 const PageTitle = ({ category }) => {
+  // Componente que se utiliza para tomar el nombre de una categoria en caso que exista en la url y mostrarlo como header de la vista
   const pageTitle = category
     ? category.charAt(0).toUpperCase() + category.slice(1).toLowerCase()
     : "";

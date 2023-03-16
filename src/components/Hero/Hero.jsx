@@ -1,4 +1,5 @@
 const Hero = () => {
+  // componente que retorna el hero
   return (
     <div className="bg-gradient-to-b from-gray-800 via-gray-800 to-cyan-600 py-8">
       <div className="max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 ">

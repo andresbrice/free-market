@@ -4,6 +4,7 @@ import { AppRoutesContext } from "../../context/AppRoutesContext.js";
 
 const Item = ({ item }) => {
   const routes = useContext(AppRoutesContext);
+  // template de los items
   return (
     <div className="group relative">
       <div className="h-80 aspect-w-1 aspect-h-1 w-64 overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80 ">

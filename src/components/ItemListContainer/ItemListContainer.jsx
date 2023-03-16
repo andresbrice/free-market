@@ -13,6 +13,7 @@ import ItemList from "../ItemList/ItemList";
 import Loader from "../Loader/Loader";
 
 const ItemListContainer = () => {
+  // Este componente es donde se renderiza la pagina principal. Tiene la logica suficiente para saber si se debe mostrar toda la coleccion de productos o solo los de la categoria indicada
   const { categoryName } = useParams();
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);

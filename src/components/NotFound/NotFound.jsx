@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
+  // en caso de no encontrarse la ruta se muestra este componente como error
   return (
     <div className="text-center">
       <p className="text-lg font-semibold text-cyan-600">404</p>

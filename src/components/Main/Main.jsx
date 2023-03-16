@@ -4,7 +4,7 @@ import { AppRoutesContext } from "../../context/AppRoutesContext.js";
 
 const Main = () => {
   const routes = useContext(AppRoutesContext);
-
+  // Componente semantico main que mapea las rutas segun el contexto de rutas
   return (
     <div className="flex-grow bg-gray-100 min-h-screen py-3 sm:py-6">
       <Routes className="flex flex-col sm:flex-row sm:flex-wrap">

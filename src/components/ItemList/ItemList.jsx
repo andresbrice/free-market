@@ -5,7 +5,7 @@ import ItemCart from "../ItemCart/ItemCart";
 
 const ItemList = ({ prods, template }) => {
   const { emptyCart } = useCartContext();
-  console.log("Prods: ", prods); // console.log("Tamaño de prods:", parseInt(prods.length));
+  // Este componente muestra segun el templete seleccionado el componente correspondiente
   return (
     <div className="max-w-screen-lg mx-auto">
       {template === "Item" ? (

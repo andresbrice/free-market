@@ -5,9 +5,9 @@ import { useContext, useState } from "react";
 import { AppRoutesContext } from "../../context/AppRoutesContext.js";
 
 const Navbar = ({ brand }) => {
+  // Componente que renderiza logo, secciones y cartwidget
   const routes = useContext(AppRoutesContext);
   const [showMenu, setShowMenu] = useState(false);
-  // console.log(showMenu);
   const toggleHamburgerHandler = () => {
     setShowMenu(!showMenu);
   };

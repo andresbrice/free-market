@@ -8,7 +8,7 @@ const Header = () => {
   const isHome = location.pathname === "/";
 
   const categoryName = location.pathname.match(/^\/category\/(.+)/)?.[1];
-
+  // Retorna un header con un condicional validando que ruta esta activa y dependiendo eso muestra el componente necesario
   return (
     <header className="bg-gray-100 shadow">
       <Navbar brand="Free Market" />

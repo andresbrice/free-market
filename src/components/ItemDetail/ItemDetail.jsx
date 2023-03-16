@@ -7,6 +7,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import Loader from "../Loader/Loader";
 
 const ItemDetail = ({ prod }) => {
+  // El componente retorna el componente loader en caso que se este cargando el producto y sino muestra la card con el producto seleccionado
   const { addItem } = useCartContext();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);

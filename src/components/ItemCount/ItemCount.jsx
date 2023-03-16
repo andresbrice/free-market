@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const ItemCount = ({ initialValue, stock, onAdd }) => {
+  // Componente que renderiza un contador para asignar la cantidad de items que se adheriran al carrito. Pudiendo incrementar o decrementar el valor
   const [counter, setCounter] = useState(initialValue);
 
   const add = () => counter < stock && setCounter(counter + 1);

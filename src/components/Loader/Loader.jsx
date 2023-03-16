@@ -1,6 +1,7 @@
 import React from "react";
 
 const Loader = ({ isLoading, isProductsLoaded }) => {
+  // Componente loader que se muestra si se estan cargando los productos
   return (
     <>
       {isLoading || !isProductsLoaded ? (

@@ -8,7 +8,7 @@ import Cart from "../components/Cart/Cart.jsx";
 import { Navigate } from "react-router-dom";
 
 export const AppRoutesContext = createContext([]);
-
+// creo array de rutas
 export const routes = [
   { path: "/", element: <ItemListContainer /> },
   { path: "/category/:categoryName", element: <ItemListContainer /> },
@@ -19,7 +19,7 @@ export const routes = [
   { path: "*", element: <Navigate to="/not-found" replace /> },
   { path: "/not-found", element: <NotFound /> },
 ];
-
+// se lo paso al proveedor como parametro
 export const AppRoutesProvider = ({ children }) => {
   return (
     <AppRoutesContext.Provider value={routes}>

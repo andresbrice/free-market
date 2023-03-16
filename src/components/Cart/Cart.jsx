@@ -4,9 +4,9 @@ import ItemList from "../ItemList/ItemList";
 
 const Cart = () => {
   const { cart, totalPrice } = useCartContext();
-  console.log("Cart:", cart);
   return (
     <>
+      {/* En caso que el carrito este vacio muestra una vista para volver al inicio y sino muestra el carrito */}
       {cart.length === 0 ? (
         <div className="mt-6 flex flex-col justify-center text-center text-sm text-gray-800">
           <h2 className="text-3xl mb-4">Empty Cart</h2>

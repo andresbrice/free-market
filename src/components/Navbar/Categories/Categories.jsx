@@ -5,6 +5,7 @@ import { routes } from "../../../context/AppRoutesContext.js";
 import { getCategories } from "../../../utils/firebase.js";
 
 const Categories = () => {
+  // componente que renderiza las categorias de los productos
   const [categories, setCategories] = useState();
 
   useEffect(() => {

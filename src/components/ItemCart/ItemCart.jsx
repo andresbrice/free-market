@@ -2,7 +2,7 @@ import { useCartContext } from "../../context/CartContext";
 
 const ItemCart = ({ item, isLast }) => {
   const { removeItem } = useCartContext();
-  console.log(item);
+  // template de los items del carrito
   return (
     <>
       <li className={`flex py-6 ${isLast ? "" : "border-b border-gray-200"}`}>
