@@ -1,4 +1,4 @@
-# Free Market
+<h1 style="display: flex; align-items: center;">Free Market<img src="https://firebasestorage.googleapis.com/v0/b/free-market-929b7.appspot.com/o/free-market-logo.svg?alt=media&token=921356f7-233f-4c46-9311-04c12b395be4" alt="Free Market Logo" width="60" height="50" style="margin-left:.5em"></h1>
 
 Free Market is an e-commerce platform developed using technologies such as React and Firebase, among others.
 
@@ -12,12 +12,13 @@ Users can add products to their shopping cart and then fill out a checkout form 
 - [Installation and Setup](#installation-and-setup)
 - [Features](#features)
 - [Technologies](#technologies)
-- [UI demo video](#UI-demo-video)
+- [UI demo video](#ui-demo-video)
 - [Contributing](#contributing)
 
 ## Demo
 
 A live demo of the application can be found at [https://free-market-ecommerce.vercel.app/](https://free-market-ecommerce.vercel.app/)
+
 
 ## Installation and Setup
 
@@ -26,21 +27,11 @@ A live demo of the application can be found at [https://free-market-ecommerce.ve
 
 2.  Navigate to the project directory:
     `cd free-market`
+    
 3.  Install the required dependencies:
     `npm install`
-
-4.  Create a Firebase project and set the environment variables by editing the firebase.js file in the /src/utils directory with the following variables:
-
-    ```REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
-    REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
-    REACT_APP_FIREBASE_PROJECT_ID=your_firebase_project_id
-    REACT_APP_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
-    REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
-    REACT_APP_FIREBASE_APP_ID=your_firebase_app_id
-    REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key
-    ```
-
-5.  Start the development server:
+    
+4.  Start the development server:
     `npm run start`
 
     The application can be accessed at [http://localhost:3000](http://localhost:3000)
