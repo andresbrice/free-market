@@ -20,8 +20,11 @@ const ItemListContainer = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     setTimeout(() => {
-      window.scrollTo(0, 0);
       setIsLoading(false);
     }, 1000);
   }, []);

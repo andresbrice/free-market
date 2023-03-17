@@ -59,7 +59,10 @@ const ItemDetail = ({ prod }) => {
               <button
                 type="button"
                 className="font-medium text-gray-600 hover:text-gray-500 focus:outline-none"
-                onClick={() => navigate(-1)}
+                onClick={() => {
+                  navigate(-1);
+                  window.scrollTo(0, 0);
+                }}
               >
                 Or continue Shopping
                 <span aria-hidden="true"> →</span>
