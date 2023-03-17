@@ -59,6 +59,8 @@ The application was built with the following technologies:
 
 ## UI Demo Video
 
+A video demonstrating the visual functionality of the application
+
 [![Demo Video](https://img.youtube.com/vi/RRTzb7WwmlA/0.jpg)](https://www.youtube.com/watch?v=RRTzb7WwmlA)
 
 ## Contributing
