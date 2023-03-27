@@ -9,6 +9,7 @@ import {
 } from "../../utils/firebase";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import Input from "../Input/Input";
 
 const Checkout = () => {
   const MySwal = withReactContent(Swal);
@@ -50,18 +51,9 @@ const Checkout = () => {
 
   // En caso que los input esten llenos habilito el boton de checkout
   useEffect(() => {
-    if (
-      fullName !== "" &&
-      email !== "" &&
-      confirmEmail !== "" &&
-      dni !== "" &&
-      phoneNumber !== "" &&
-      address !== ""
-    ) {
-      setDisabled(false);
-    } else {
-      setDisabled(true);
-    }
+    setDisabled(
+      !(fullName && email && confirmEmail && dni && phoneNumber && address)
+    );
   }, [fullName, email, confirmEmail, dni, phoneNumber, address]);
 
   const consultarForm = (e) => {
@@ -71,6 +63,7 @@ const Checkout = () => {
     const data = new FormData(formData.current);
 
     const client = Object.fromEntries(data);
+    console.log(client.fullName);
 
     if (email !== confirmEmail) {
       toast.error("The emails don't match.");
@@ -142,128 +135,62 @@ const Checkout = () => {
                 onSubmit={consultarForm}
                 ref={formData}
               >
-                <div>
-                  <label
-                    htmlFor="fullName"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Full Name
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="fullName"
-                      name="fullName"
-                      type="text"
-                      autoComplete="off"
-                      required
-                      className="w-full border border-gray-200 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
-                      pattern="[A-Za-z\u00F1 ]+"
-                      onChange={handleFullNameChange}
-                    />
-                  </div>
-                </div>
+                <Input
+                  label="Full Name"
+                  htmlFor="fullName"
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  pattern="[A-Za-z\u00F1 ]+"
+                  onChange={handleFullNameChange}
+                />
+                <Input
+                  label="Email"
+                  htmlFor="email"
+                  id="email"
+                  name="email"
+                  type="email"
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                  onChange={handleEmailChange}
+                />
+                <Input
+                  label="Confirm email"
+                  htmlFor="confirmEmail"
+                  id="email"
+                  name="email"
+                  type="email"
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                  onChange={handleConfirmEmailChange}
+                />
+                <Input
+                  label="DNI"
+                  htmlFor="dni"
+                  id="dni"
+                  name="dni"
+                  type="text"
+                  pattern="[0-9]+"
+                  maxLength="8"
+                  onChange={handleDniChange}
+                />
+                <Input
+                  label="Phone Number"
+                  htmlFor="phoneNumber"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  type="text"
+                  pattern="[0-9]+"
+                  maxLength="10"
+                  onChange={handlePhoneNumberChange}
+                />
+                <Input
+                  label="Address"
+                  htmlFor="address"
+                  id="address"
+                  name="address"
+                  type="text"
+                  onChange={handleAddressChange}
+                />
 
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Email
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="email"
-                      name="email"
-                      type="text"
-                      autoComplete="off"
-                      required
-                      className="w-full border border-gray-200 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
-                      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-                      onChange={handleEmailChange}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Confirm email
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      autoComplete="off"
-                      required
-                      className="w-full border border-gray-200 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
-                      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-                      onChange={handleConfirmEmailChange}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    htmlFor="dni"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    DNI
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="dni"
-                      name="dni"
-                      type="text"
-                      autoComplete="off"
-                      required
-                      className="w-full border border-gray-200 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
-                      pattern="[0-9]+"
-                      maxLength="8"
-                      onChange={handleDniChange}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    htmlFor="phoneNumber"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Phone Number
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="phoneNumber"
-                      name="phoneNumber"
-                      type="text"
-                      autoComplete="off"
-                      required
-                      className="w-full border border-gray-200 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
-                      pattern="[0-9]+"
-                      maxLength="10"
-                      onChange={handlePhoneNumberChange}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    htmlFor="address"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Address
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="address"
-                      name="address"
-                      type="text"
-                      autoComplete="off"
-                      required
-                      className="w-full border border-gray-200 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
-                      onChange={handleAddressChange}
-                    />
-                  </div>
-                </div>
                 <div>
                   <button
                     type="submit"
