@@ -3,7 +3,7 @@ import Categories from "../Categories/Categories";
 // HOOKS
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { AppRoutesContext } from "../../../context/AppRoutesContext.js";
+import { AppRoutesContext } from "../../../../context/AppRoutesContext.js";
 
 const Sections = React.memo(() => {
   // componente que renderiza las secciones

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { consultarJSON } from "../../../utils/functions";
-import { routes } from "../../../context/AppRoutesContext.js";
-import { getCategories } from "../../../utils/firebase.js";
+import { routes } from "../../../../context/AppRoutesContext.js";
+import { getCategories } from "../../../../utils/firebase.js";
 
 const Categories = () => {
   // componente que renderiza las categorias de los productos

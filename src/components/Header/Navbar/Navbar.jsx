@@ -1,8 +1,8 @@
-import CartWidget from "../CartWidget/CartWidget";
+import CartWidget from "../../CartWidget/CartWidget";
 import Sections from "./Sections/Sections";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
-import { AppRoutesContext } from "../../context/AppRoutesContext.js";
+import { AppRoutesContext } from "../../../context/AppRoutesContext.js";
 
 const Navbar = ({ brand }) => {
   // Componente que renderiza logo, secciones y cartwidget
